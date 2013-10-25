@@ -126,7 +126,7 @@ void RecAnalystTranslator::translatePlayer(const RECANALYST_PLAYER& p, Player& p
   player.owner = p.bOwner != 0;
   player.civId = static_cast<Civilization>(p.dwCivId);
   player.civ = p.szCivilization;
-  player.color = static_cast<PlayerColor>(p.byColor);
+  player.color = static_cast<PlayerColor>(p.dwColor);
   player.feudalTime = p.dwFeudalTime;
   player.castleTime = p.dwCastleTime;
   player.imperialTime = p.dwImperialTime;
@@ -193,7 +193,7 @@ void RecAnalystTranslator::translateGameSettings(const RECANALYST_GAMESETTINGS& 
 void RecAnalystTranslator::translateChatMessage(const RECANALYST_CHATMESSAGE& cm, ChatMessage& chatMessage) {
   chatMessage.time = cm.dwTime;
   chatMessage.msg = cm.szMessage;
-  chatMessage.color = static_cast<PlayerColor>(cm.byColor);
+  chatMessage.color = static_cast<PlayerColor>(cm.dwColor);
 }
 
 Tribute RecAnalystTranslator::translateTribute(const RECANALYST_TRIBUTE& t, const Players& players) {

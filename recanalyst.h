@@ -127,7 +127,7 @@ typedef struct tagRECANALYST_PLAYER {
   BOOL bOwner;
   TCHAR szCivilization[256];
   DWORD dwCivId;
-  BYTE byColor;
+  DWORD dwColor;
   BOOL bIsCooping;
   DWORD dwFeudalTime;
   DWORD dwCastleTime;
@@ -201,10 +201,10 @@ typedef struct tagRECANALYST_GAMESETTINGS {
  * This structure contains information about a chat message.
  */
 typedef struct tagRECANALYST_CHATMESSAGE {
-  DWORD dwTime;  // always zero for pre-game chat messages
-  BYTE byColor;  /* zero for players who left the game before its
-                    start in pre-game chat; zero for age advances,
-                    resign and disconnect messages in in-game chat */
+  DWORD dwTime;   // always zero for pre-game chat messages
+  DWORD dwColor;  /* zero for players who left the game before its
+                     start in pre-game chat; zero for age advances,
+                     resign and disconnect messages in in-game chat */
   TCHAR szMessage[256];
 } RECANALYST_CHATMESSAGE, *LPRECANALYST_CHATMESSAGE;
 

@@ -66,7 +66,7 @@ namespace RecAnalystWrapper {
     GREEN,
     YELLOW,
     TEAL,
-    PINK,
+    PURPLE,
     GREY,
     ORANGE
   }
