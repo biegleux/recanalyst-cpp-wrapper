@@ -295,7 +295,7 @@ struct GameSettings {
   std::string map;
   std::string playersType;
   std::string pov;
-  std::string objectivesString;
+  std::string objectives;
   int mapId;
   int popLimit;
   bool lockDiplomacy;

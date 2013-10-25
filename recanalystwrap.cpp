@@ -355,9 +355,9 @@ void RecAnalyst::Impl::analyze(const std::string& fileName) {
   int size = recanalyst_getobjectives(mRecAnalyst, NULL);
   throwExceptionIfError(size);
   if (size > 0) {
-    mGameSettings.objectivesString.resize(size);
-    throwExceptionIfError(recanalyst_getobjectives(mRecAnalyst, &mGameSettings.objectivesString[0]));
-    mGameSettings.objectivesString.resize(size - 1);
+    mGameSettings.objectives.resize(size);
+    throwExceptionIfError(recanalyst_getobjectives(mRecAnalyst, &mGameSettings.objectives[0]));
+    mGameSettings.objectives.resize(size - 1);
   }
   throwExceptionIfError(recanalyst_enumplayers(mRecAnalyst, enumPlayersCallback, reinterpret_cast<LPARAM>(this)));
 
