@@ -59,6 +59,18 @@ namespace RecAnalystWrapper {
     SLAVS
   };
 
+  enum class PlayerColor {
+    UNDEFINED,
+    BLUE,
+    RED,
+    GREEN,
+    YELLOW,
+    TEAL,
+    PINK,
+    GREY,
+    ORANGE
+  }
+
   enum class VictoryCondition {
     STANDARD,
     CONQUEST,
@@ -243,7 +255,7 @@ struct Player : CoopingPlayer {
   bool owner;
   Civilization civId;
   std::string civ;
-  int color;
+  PlayerColor color;
   unsigned int feudalTime;
   unsigned int castleTime;
   unsigned int imperialTime;
@@ -251,7 +263,7 @@ struct Player : CoopingPlayer {
   InitialState initialState;
   Achievement achievement;
   Player() : index(0), human(false), team(0), owner(false), civId(Civilization::BRITONS),
-    color(0), feudalTime(0), castleTime(0), imperialTime(0) {}
+    color(PlayerColor::UNDEFINED), feudalTime(0), castleTime(0), imperialTime(0) {}
 };
 
 struct Victory {
@@ -314,8 +326,8 @@ struct GameSettings {
 struct ChatMessage {
   unsigned int time;
   std::string msg;
-  int color;
-  ChatMessage() : time(0), color(0) {}
+  PlayerColor color;
+  ChatMessage() : time(0), color(PlayerColor::UNDEFINED) {}
 };
 
 struct Tribute {
