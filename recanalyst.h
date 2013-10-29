@@ -215,7 +215,7 @@ typedef struct tagRECANALYST_TRIBUTE {
   DWORD dwTime;
   DWORD dwPlayerFrom;
   DWORD dwPlayerTo;
-  BYTE byResourceId;
+  BYTE byResource;
   DWORD dwAmount;
   FLOAT fFee;
 } RECANALYST_TRIBUTE, *LPRECANALYST_TRIBUTE;

@@ -201,7 +201,7 @@ Tribute RecAnalystTranslator::translateTribute(const RECANALYST_TRIBUTE& t, cons
   const Player& p2 = players.find(t.dwPlayerTo)->second;
   Tribute tribute(p1, p2);
   tribute.time = t.dwTime;
-  tribute.resource = static_cast<Resource>(t.byResourceId);
+  tribute.resource = static_cast<Resource>(t.byResource);
   tribute.amount = t.dwAmount;
   tribute.fee = t.fFee;
   return tribute;
