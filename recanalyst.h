@@ -99,7 +99,7 @@ typedef struct tagRECANALYST_SOCIETYSTATS {
   BYTE byTotalWonders;
   BYTE byTotalCastles;
   BYTE byRelicsCaptured;
-  BYTE wVillagerHigh;
+  WORD wVillagerHigh;
 } RECANALYST_SOCIETYSTATS, *LPRECANALYST_SOCIETYSTATS;
 
 /*
