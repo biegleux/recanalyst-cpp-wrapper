@@ -1,4 +1,4 @@
-recanalyst-c-wrapper
-====================
+C++ wrapper for RecAnalyst
+==========================
 
 RecAnalyst C++ wrapper
